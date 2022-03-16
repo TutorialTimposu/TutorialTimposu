@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'TutorialTimposu', // Usually your GitHub org/user name.
-  projectName: 'TutorialTimposu', // Usually your repo name.
+  projectName: 'TutorialTimposu.github.io', // Usually your repo name.
   trailingSlash: false, // custom Github Pages
 
   presets: [
@@ -46,7 +46,7 @@ const config = {
       navbar: {
         title: 'Tutorial Timposu',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Tutorial Timposu Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -58,10 +58,15 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: 'https://saweria.co/timposu',
+            label: 'Donasi',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/tutorialtimposu',
             label: 'GitHub',
             position: 'right',
-          },
+          },          
         ],
       },
       footer: {
@@ -77,20 +82,16 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Social Media',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Facebook',
+                href: 'https://facebook.com/timposulabs',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'Instagram',
+                href: 'https://www.instagram.com/timposulabs',
+              },              
             ],
           },
           {
@@ -101,8 +102,12 @@ const config = {
                 to: '/blog',
               },
               {
+                label: 'Donasi',
+                href: 'https://saweria.co/timposu',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/tutorialtimposu',
               },
             ],
           },
