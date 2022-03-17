@@ -25,13 +25,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,15 +49,62 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          // {
+          //   position: 'left',
+          //   to: 'https://udemy.com/',
+          //   label: 'Kelas Online',
+          // },
+          // {
+          //   position: 'left',
+          //   label: 'Promo',
+          //   items: [
+          //       {
+          //           to: 'https://udemy.com/',
+          //           label: 'Promo Kelas Online',
+          //       },
+          //       {
+          //           to: 'https://udemy.com/',
+          //           label: 'Promo Kelas Online di Udemy',
+          //       },               
+          //   ]
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
-            type: 'doc',
-            docId: 'intro',
             position: 'left',
             label: 'Tutorial',
+            items: [
+              {
+                to: '/java/',
+                label: 'Java',
+              },
+              // {
+              //   to: '#',
+              //   label: 'Python',
+              // }
+            ],
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   position: 'left',
+          //   label: 'Linux Server',
+          //   items: [
+          //     {
+          //       to: '#',
+          //       label: 'Fedora 35',                
+          //     },
+          //     {
+          //       to: '#',
+          //       label: 'Ubuntu Server 20.04',
+          //     },
+          //   ],
+          // },
+          {to: '/blog', label: 'Blog', position: 'left'}, 
           {
-            href: 'https://saweria.co/timposu',
+            href: 'https://saweria.co/tutorialtimposu',
             label: 'Donasi',
             position: 'right',
           },
@@ -73,17 +119,29 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'More',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'About',
+                to: '#',
+              },
+              {
+                label: 'Kontak',
+                to: '#',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
           {
             title: 'Social Media',
             items: [
+              {
+                label: 'Youtube',
+                href: '#',
+              },
               {
                 label: 'Facebook',
                 href: 'https://facebook.com/timposulabs',
@@ -95,15 +153,11 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Link',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'Donasi',
-                href: 'https://saweria.co/timposu',
+                href: 'https://saweria.co/tutorialtimposu',
               },
               {
                 label: 'GitHub',
@@ -112,13 +166,26 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Love <span style="color: #e25555;">&#9829;</span>.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+          id: 'java',
+          path: 'tutorial/java',
+          routeBasePath: 'java',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+      },
+    ],
+  ],
 };
 
 module.exports = config;
