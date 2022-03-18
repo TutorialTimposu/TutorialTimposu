@@ -166,7 +166,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Love <span style="color: #e25555;">&#9829;</span>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -175,12 +175,23 @@ const config = {
     }),
 
   plugins: [
+   
     [
       '@docusaurus/plugin-content-docs',
       {
           id: 'java',
-          path: 'tutorial/java',
+          path: 'tutorial/java/',
           routeBasePath: 'java',
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+          id: 'python',
+          path: 'tutorial/python',
+          routeBasePath: 'python',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
       },
