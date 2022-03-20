@@ -30,7 +30,7 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -102,14 +102,19 @@ const config = {
           //     },
           //   ],
           // },
-          {to: '/blog', label: 'Blog', position: 'left'}, 
+          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://github.com/TutorialTimposu/forum/discussions',
+            label: 'Diskusi',
+            position: 'right',
+          }, 
           {
             href: 'https://saweria.co/tutorialtimposu',
             label: 'Donasi',
             position: 'right',
           },
           {
-            href: 'https://github.com/tutorialtimposu',
+            href: 'https://github.com/TutorialTimposu',
             label: 'GitHub',
             position: 'right',
           },          
@@ -161,12 +166,16 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/tutorialtimposu',
+                href: 'https://github.com/TutorialTimposu',
+              },
+              {
+                label: 'Forum',
+                href: 'https://github.com/TutorialTimposu/forum/discussions',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Love ❤️.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -183,7 +192,7 @@ const config = {
           path: 'tutorial/java/',
           routeBasePath: 'java',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
       },
     ],
     [
@@ -193,7 +202,7 @@ const config = {
           path: 'tutorial/python',
           routeBasePath: 'python',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
       },
     ],
   ],

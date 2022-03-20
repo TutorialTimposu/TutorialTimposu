@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Ayo!!! Mulai Belajar 🎉
           </Link>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={`Halo, Selamat Datang di ${siteConfig.title}`}
       description="Tutorial Pemrograman, Android, Linux Server Indonesia <head />">
       <HomepageHeader />
       <main>
