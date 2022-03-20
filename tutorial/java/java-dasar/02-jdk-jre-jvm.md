@@ -31,16 +31,16 @@ Dari penjelasan di atas dapat disimpulkan bahwa paket JDK adalah paket yang dipe
 
 JDK itu sendiri ada banyak versi distribusinya, itu dikarenakan Oracle (dulunya Sun Microsystems) mengeluarkan spesifikasi JDK yang bebas bagi siapapun untuk mengimplementasikannya untuk membuat versi JDK mereka sendiri. Beberapa perusahaan yang mengimplementasikan JDK adalah sebagai berikut:
 
-* Oracle dengan [OracleJDK](https://www.oracle.com/java/technologies/downloads/). dan [OpenJDK](https://jdk.java.net/).
+* Oracle dengan [OracleJDK](https://www.oracle.com/java/technologies/downloads/) dan [OpenJDK](https://jdk.java.net/).
 * Amazon dengan [Correto](https://aws.amazon.com/corretto/).
 * Alibaba dengan [Dragonwell](https://dragonwell-jdk.io/).
 * Microsoft dengan [Microsoft OpenJDK](https://www.microsoft.com/openjdk).
 * dan masih banyak lagi bisa dilihat [disini](https://sdkman.io/jdks).
 
 :::tip
-Pada dasarnya setiap distribusi JDK secara garis besar akan sama saja, yang membedakannya adalah ada paket tambahan yang berbeda antar tiap distribusi JDK sesuai dengan standard pembuat JDK itu masing-masing, selain itu perbedaan lain yaitu lisensi, karena tidak semua distribusi JDK dapat digunakan secara bebas.
+Pada dasarnya setiap distribusi JDK secara garis besar hampir sama saja, yang membedakannya adalah, ada paket tambahan yang berbeda tiap distribusi JDK sesuai dengan keinginan pembuat JDK itu masing-masing. Selain itu perbedaan lain yaitu lisensi, karena tidak semua distribusi dapat digunakan secara bebas.
 
-Saran kami gunakan versi yang OpenJDK apabila ingin bebas menggunakannya, karna distribusi OpenJDK bersifat free dan opensource.
+Saran kami gunakan versi yang OpenJDK apabila ingin bebas menggunakannya, karna distribusi [OpenJDK](https://jdk.java.net/) bersifat free dan opensource.
 :::
 
 ## Proses Development Program Java
