@@ -33,7 +33,41 @@ JDK tersedia di sistem operasi Linux, Windows dan MacOS dan format filenya adala
 
 ## Setting Path
 
+Agar lokasi JDK bisa diketahui sistem operasi, kita perlu mendaftarkan lokasi direktori/folder `bin` yang ada di dalam direktori/folder JDK ke variable Path sistem operasi. Cara ini diperlukan agar kita bisa mengakses JDK dan JRE dari mana saja menggunakan command prompt / terminal.
+
 ### Setting Path di Windows
+
+Untuk setting path, bisa dilakukan di pengaturan Environment Variables Windows, pada menu Search Windows Start ketik `Environment` lalu pilih `Edit the system environmet variables`. 
+
+![Environment Variables](/img/general/environment-windows.jpg "Environment Variables")
+
+Selanjunya akan muncul window system properties, lanjut pilih Environment Variables.
+
+![Environment Variables](/img/general/environment-windows2.jpg "Environment Variables")
+
+Kemudian pada bagian System variables edit variable yang bernama **Path** lalu klik edit untuk mengubahnya.
+
+![Environment Variables](/img/general/environment-windows3.jpg "Environment Variables")
+
+Klik **New** untuk menambah variable baru.
+
+![Environment Variables](/img/general/environment-windows4.jpg "Environment Variables")
+
+Tambahkan lokasi folder OpenJDK yang sudah diekstrak, contoh lokasi ada di `C:\Program Files\Java\jdk-17\bin`, lalu klik **OK**. 
+
+![Environment Variables](/img/java/environment-windows-path.jpg "Environment Variables")
+
+Selanjutnya kita akan mencoba JDK dan JRE apakah sudah terinstal dengan baik dan benar di Windosws. Buka command prompt dengan cara ketik `cmd` pada menu start windows dan masukan perintah `java -version` dan `javac -version`.
+
+Perintah `java -version` untuk melakukan pengecekan terhadap versi JRE yang ada. Jika versi Java keluar seperti gambar dibawah ini, maka JRE berhasil terinstall.
+
+![Java Version Windows](/img/java/java-version-win.jpg "Java Version Windows")
+
+Perintah `javac -version` untuk melakukan pengecekan terhadap versi Java Compiler yang ada. Jika versi `javac` keluar seperti gambar dibawah ini, maka JDK berhasil terinstall.
+
+![Javac Version Windows](/img/java/javac-version-win.jpg "Javac Version Windows")
+
+Jika berhasil, kita sudah sudah siap membuat program Java di Windows.
 
 ### Setting Path di Linux
 
@@ -53,7 +87,7 @@ Perintah `javac -version` untuk melakukan pengecekan terhadap versi Java Compile
 
 ![Linux Javac](/img/java/linux-javac.png "Linux Javac Terminal")
 
-Jika berhasil, kita sudah sudah siap membuat aplikasi Java di Linux.
+Jika berhasil, kita sudah sudah siap membuat program Java di Linux.
 
 ### Setting Path di MacOS
 
@@ -73,4 +107,4 @@ Perintah `javac -version` untuk melakukan pengecekan terhadap versi Java Compile
 
 ![Mac Javac](/img/java/mac-javac.png "Mac Javac Terminal")
 
-Jika berhasil, kita sudah sudah siap membuat aplikasi Java di MacOS.
+Jika berhasil, kita sudah sudah siap membuat program Java di MacOS.
