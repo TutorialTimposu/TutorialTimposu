@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[3010],{9850:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/openjdk","name":"openjdk","count":1,"permalink":"/blog/tags/openjdk"}')}}]);

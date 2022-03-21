@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[4651],{5952:function(e){e.exports=JSON.parse('{"permalink":"/blog/tags/macos","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

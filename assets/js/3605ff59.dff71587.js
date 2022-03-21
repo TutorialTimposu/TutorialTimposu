@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[3881],{2969:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/jdk","name":"jdk","count":1,"permalink":"/blog/tags/jdk"}')}}]);
