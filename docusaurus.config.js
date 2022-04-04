@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Tutorial Timposu',
   tagline: 'Tempat Belajar Pemrograman Yang Asik dan Menyenangkan',
-  url: 'https://tutorialtimposu.github.io',
+  url: 'https://tutorialtimposu.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
