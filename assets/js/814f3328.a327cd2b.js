@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"5 Alasan menggunakan Golang untuk Aplikasi Enterpise","permalink":"/blog/alasan-menggunakan-golang-enterprise"},{"title":"Welcome","permalink":"/blog/welcome"}]}')}}]);
