@@ -26,14 +26,12 @@
         <id>welcome</id>
         <link href="https://tutorialtimposu.com/blog/welcome"/>
         <updated>2022-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Selamat Datang di Tutorial Timposu.]]></summary>
-        <content type="html"><![CDATA[<p>Selamat Datang di Tutorial Timposu.</p>]]></content>
+        <summary type="html"><![CDATA[Selamat Datang di Tutorial Timposu. Website ini dibuat dengan tujuan untuk membagikan tutorial bahasa pemrograman maupun ilmu komputer seputarnya. Website ini dibuat dan di-maintenance oleh Ucup Topekox. Sedangkan latar belakang pembuatan website justru untuk dokumentasi, kenapa dokumentasi?.]]></summary>
+        <content type="html"><![CDATA[<p>Selamat Datang di Tutorial Timposu. Website ini dibuat dengan tujuan untuk membagikan tutorial bahasa pemrograman maupun ilmu komputer seputarnya. Website ini dibuat dan di-maintenance oleh <a href="https://topekox.github.io/" target="_blank" rel="noopener noreferrer">Ucup Topekox</a>. Sedangkan latar belakang pembuatan website justru untuk dokumentasi, kenapa dokumentasi?. </p><p>Iya benar dokumentasi karena sebenarnya saya dan mungkin hampir semua manusia memiliki sifat pelupa, oleh karena itu saya berinisiatif untuk mendokumentasikan apa yang saya telah pelajari dan ketahui. Selain itu disela-sela waktu saya juga sering mengajar, dan karena biasanya ada saja siswa yang meminta materi langsung saja saya arahkan ke website ini.</p><p>Penyusunan tutorial pada website ini sedemikianrupa dibuat dengan jalur roadmap yang jelas sehingga teman-teman dapat belajar dengan lebih terarah. Selain itu pada website ini juga terdapat artikel blog yang berisi informasi seputar dunia pemrograman dan lainnya. Apabila ada pertanyaan seputar website ini silahkan hubungi saya di <a href="mailto:ucuptopekox@gmail.com" target="_blank" rel="noopener noreferrer">ucuptopekox@gmail.com</a> ataupun di media sosial saya.</p><p>Akhir kata semoga website ini dapat berguna bagi teman-teman semua, dan apabila ingin mensupport website ini, sudi kiranya teman-teman membagikan/memberitahukan website kepada siapapun yang membutuhkan, agar ilmunya tidak berhenti anda saja.</p>]]></content>
         <author>
             <name>Ucup TopekoX</name>
             <uri>https://topekox.github.io</uri>
         </author>
-        <category label="facebook" term="facebook"/>
-        <category label="hello" term="hello"/>
-        <category label="docusaurus" term="docusaurus"/>
+        <category label="blog" term="blog"/>
     </entry>
 </feed>

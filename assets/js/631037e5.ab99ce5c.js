@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[801],{7064:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"blog","count":1,"permalink":"/blog/tags/blog"}')}}]);
