@@ -105,7 +105,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/TutorialTimposu/forum/discussions',
-            label: 'Diskusi',
+            label: 'Forum',
             position: 'right',
           }, 
           {
