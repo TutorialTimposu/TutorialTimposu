@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[7975],{3820:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"java","count":1,"permalink":"/blog/tags/java"}')}}]);
