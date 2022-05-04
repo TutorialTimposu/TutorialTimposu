@@ -1,8 +1,7 @@
 ---
 sidebar_position: 5
+title: 'Cara Install Java'
 ---
-
-# Cara Install Java
 
 Untuk mengembangkan aplikasi Java, setidaknya kita membutuhkan compiler dan runtime Java. Seperti yang sudah diterangkan pada [artikel sebelumnya](/java/java-dasar/jdk-jre-jvm), kita membutuhkan dua paket aplikasi yaitu :
 

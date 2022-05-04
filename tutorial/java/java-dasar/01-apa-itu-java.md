@@ -3,8 +3,6 @@ sidebar_position: 3
 title: 'Apa itu Java'
 ---
 
-# Apa Itu Java?
-
 ## Sejarah
 
 Bahasa Pemrograman Java pertama kali dikembangkan oleh perusahaan Sun Microsystems yang dibuat oleh James Gosling bersama timnya dan diperkenalkan ke publik pada tahun  1995. Bahasa Pemrograman ini awalnya bernama '*Oak*' tetapi karena masalah lisensi (nama tersebut sudah terdaftar oleh perusahaan lain), James Gosling dan timnya mengganti nama Oak menjadi Java.

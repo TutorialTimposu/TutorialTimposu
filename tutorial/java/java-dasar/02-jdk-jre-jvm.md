@@ -3,8 +3,6 @@ sidebar_position: 4
 title: 'JDK, JRE dan JVM'
 ---
 
-# JDK, JRE dan JVM
-
 Sebelum melakukan instalasi Java, sebaiknya perlu terlebih dahulu memahami apa itu Java Development Kit (JDK), Java Runtime Environment (JRE) dan Java Virtual Manchine (JVM).
 
 ## Java Virtual Manchine (JVM)
