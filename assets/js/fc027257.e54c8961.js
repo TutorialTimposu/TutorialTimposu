@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[1702],{7229:function(u){u.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"ubuntu","count":1,"permalink":"/blog/tags/ubuntu"}')}}]);
