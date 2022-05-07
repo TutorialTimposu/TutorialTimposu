@@ -2,7 +2,7 @@
 slug: java-optional
 title: Tips menangani NullPointerException dengan Java Optional
 authors: topekox
-tags: [java]
+tags: [java, java 8]
 ---
 
 Bagi programmer Java sudah wajib hukumnya untuk selalu bertemu dengan `NullPointerException`, dan ini sebenarnya membuat crash program kita, dan yang jelas kita harus sedikit garuk kepala untuk menangani exception ini. Cara yang paling populer adalah diakali dengan statement kondisi `if else`. Untuk menangani ini, Java versi 8 mengenalkan fitur baru yaitu class baru bernama `Optional` yang berada pada package `java.util`. Class ini sangat membantu sekali untuk menangani `null` tanpa harus dicek terlebih dahulu dengan statement kondisi `if else`. 
@@ -11,7 +11,7 @@ Bagi programmer Java sudah wajib hukumnya untuk selalu bertemu dengan `NullPoint
 
 Berikut contoh program yang menghasilkan `NullPointerException` :
 
-```java title="DemoOptional.java"
+```java
 public class DemoOptional {
 
     public static void main(String[] args) {
@@ -24,6 +24,8 @@ public class DemoOptional {
 }
 ```
 
+Sekilas program ini tidak ada yang salah, ketika dicompile program ini tidak akan mengalami pesan error, tetapi ketika dieksekusi program ini akan menghasilkan error dikarenakan variable `john` yang dipanggil masih belum ada nilainya alias `null`.
+
 Ketika program ini di jalankan/run maka akan menghasilkan exception `NullPointerException`, karena memang array students index 10 masih bernilai `null`.
 
 ```bash
@@ -31,8 +33,45 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String
 	at DemoOptional.main(DemoOptional.java:6)
 ```
 
-Nah untuk mengatasinya biasanya dibuatkan statement pemilihan `if else` untuk menghandle exception tersebut misalnya seperti di bawah ini:
+Nah untuk mengatasinya biasanya dibuatkan statement pemilihan `if` untuk menghandle exception tersebut misalnya seperti di bawah ini:
 
+```java
+String[] students = new String[20];
+
+// cek nilai apakah null
+if (students[10] == null) {
+    students[10] = "John Doe";
+}
+
+String john = students[10].toUpperCase();
+
+System.out.println("Name : " + john);
+```
+
+Output:
+
+```bash
+Name : JOHN DOE
+```
+
+Contoh penggunaan `if` seperti contoh di atas tidaklah salah, tetapi karena seringnya programmer Java mendapatkan permasalahan seperti contoh di atas maka Java 8 membuatkan solusi lain menggunakan class `Optional`. Contoh program di atas dapat disederhanakan menggunakan class Optional seperti contoh sebagai berikut:
+
+```java
+import java.util.Optional;
+
+public class DemoOptional {
+    public static void main(String[] args) {
+        String[] students = new String[20];
+
+        String john = Optional.ofNullable(students[10])
+                .orElse("John Doe").toUpperCase();
+
+        System.out.println("Name : " + john);
+    }
+}
+```
+
+Output yang dihasilkan akan sama dengan program sebelumnya tetapi cara yang digunakan sedikit berbeda karena menggunakan class `Optional` untuk memeriksa nilai dari `student[10]` yang langsung memberikan nilai ketika bernilai Nullable.
 
 Beberapa contoh penggunaan Optional.
 
