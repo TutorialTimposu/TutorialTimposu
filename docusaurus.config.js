@@ -50,7 +50,7 @@ const config = {
         title: 'Tutorial Timposu',
         logo: {
           alt: 'Tutorial Timposu Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo-topekox.svg',
         },
         items: [
           // {
