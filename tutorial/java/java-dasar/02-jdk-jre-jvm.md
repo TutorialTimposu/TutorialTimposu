@@ -3,9 +3,9 @@ sidebar_position: 4
 title: 'JDK, JRE dan JVM'
 ---
 
-Sebelum melakukan instalasi Java, sebaiknya perlu terlebih dahulu memahami apa itu Java Development Kit (JDK), Java Runtime Environment (JRE) dan Java Virtual Manchine (JVM).
+Sebelum melakukan instalasi Java, sebaiknya perlu terlebih dahulu memahami apa itu Java Development Kit (JDK), Java Runtime Environment (JRE) dan Java Virtual Machine (JVM).
 
-## Java Virtual Manchine (JVM)
+## Java Virtual Machine (JVM)
 
 JVM adalah mesin virtual yang menyediakan lingkungan runtime yang dibutuhkan agar bytecode/program/binary Java dapat dieksekusi/dijalankan. JVM juga dapat menjalankan program-program yang ditulis dalam bahasa pemrograman lain yang dikompilasi ke bytecode Java (contoh Kotlin, Scala  dll).
 
@@ -35,9 +35,11 @@ JDK itu sendiri ada banyak versi distribusinya, itu dikarenakan Oracle (dulunya 
 * Microsoft dengan [Microsoft OpenJDK](https://www.microsoft.com/openjdk).
 * dan masih banyak lagi bisa dilihat [disini](https://sdkman.io/jdks).
 
-:::tip
+:::info
 Pada dasarnya setiap distribusi JDK secara garis besar hampir sama saja, yang membedakannya adalah, ada paket tambahan yang berbeda tiap distribusi JDK sesuai dengan keinginan pembuat JDK itu masing-masing. Selain itu perbedaan lain yaitu lisensi, karena tidak semua distribusi dapat digunakan secara bebas.
+:::
 
+:::tip
 Saran kami gunakan versi yang OpenJDK apabila ingin bebas menggunakannya, karna distribusi [OpenJDK](https://jdk.java.net/) bersifat free dan opensource.
 :::
 
