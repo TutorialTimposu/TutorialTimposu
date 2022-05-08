@@ -418,4 +418,65 @@ Testing dengan aplikasi REST Client. Disini saya akan testing POST data baru:
 
 Respon yang dihasilkan `405 - Method Not Allowed` kita tidak bisa mengakses method POST, berarti konfigurasi kita berhasil.
 
+## Angular Front End
+
+### Membuat project
+
+Disini kita akan membuat project Angular dengan Angluar CLI pastikan sudah terinstall terlebih dahulu. Kita akan menggunakan perintah `ng new angular-frontend`.
+
+```bash
+ng new angular-frontend
+
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSS
+```
+
+### Membuat Class
+
+```bash
+ng generate class model/Person
+
+```
+
+```typescript title=person.ts
+export class Person {
+
+    id!: number;
+    firstName!: string;
+    lastName!: string;
+    email!: string;
+}
+````
+
+### Membuat Service
+
+```bash
+ng generate service service/person
+```
+
+### Membuat Component
+
+```bash
+ng generate component component/person-list
+```
+
+### Menambahkan Bootstrap
+
+```bash
+npm install bootstrap
+npm install @fortawesome/fontawesome-free
+```
+
+lalu tambahkan di file `angular.json` :
+
+```json title=angular.json
+...
+
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/all.min.css"
+            ],
+...
+```
 
