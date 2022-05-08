@@ -1,6 +1,6 @@
 ---
 slug: spring-boot-angular
-title: Tutorial Fullstack Spring Boot dan Angular - Part 1 (Setup Database)
+title: Tutorial Membuat Aplikasi Web Spring Boot dan Angular (READ Only)
 authors: topekox
 tags: [spring, spring boot, angular]
 ---
@@ -8,6 +8,10 @@ tags: [spring, spring boot, angular]
 Pada seri tutorial ini kita akan membangun aplikasi *Fullstack* Spring Boot sebagai *backend* dan Angular sebagai *frontend*. Fullstack developer secara garis besar adalah seseorang yang bekerja atau merangkap tugas sebagai back end dan front end developer. Lebih spesifiknya, developer bisa bekerja dengan aplikasi backend seperti Javascript, PHP, Go, Java, Database (backend) dan juga bisa mengkonversi desain ke dalam kode pemrograman seperti HTML, CSS, XML, JSON (frontend).
 
 <!--truncate-->
+
+:::info
+Aplikasi yang akan dibuat hanya untuk menampilkan data READ ONLY, aplikasi ini tidak mendukung Create, Update dan Delete.
+:::
 
 ## Teknologi Yang Digunakan
 
@@ -38,10 +42,6 @@ Adapun tools yang digunakan pada tutorial ini:
 Untuk IDE nya saya menggunakan (bisa menggunakan IDE lain sesuai selera):
 * Intellij IDEA Community - untuk coding Spring Boot
 * VS Code - untuk coding Angular
-
-:::info
-Silahkan install terlebih dahulu tools di atas (JDK, NodeJS, Maven dan database MySQL) beserta IDE-nya agar bisa mengikuti tutorial ini.
-:::
 
 ## Proses Development
 
@@ -77,7 +77,7 @@ Kemudian dalam praktek ini kita akan menyiapkan database dengan tabel `person` d
 
 ![database relation](db.png)
 
-Untuk datanya tidak usah kawatir, saya sudah menyiapkan file dump `sql` nya
+Untuk datanya tidak usah khawatir, saya sudah menyiapkan file dump `sql` nya
 
 Untuk tabel `city` :
 
@@ -129,4 +129,293 @@ SELECT * FROM city;
 SELECT * FROM person;
 ```
 
-**Bersambung.....**
+## Spring Boot Back End
+
+Di artikel kita membuat project Spring Boot yang hanya akan membuat aplikasi dengan studi kasus untuk menampilkan data READ ONLY, aplikasi ini tidak mendukung Create, Update dan Delete.
+
+Kita akan membuat backend API dengan Spring boot yang akan mengenerate:
+
+| Method      | URL                   | Keterangan                          |
+| ----------- | -----------           | ---                                 |
+| GET         | `/api/users`            | menampilkan data users            |
+| GET         | `/api/users/:id`        | menampilkan data user berdasarkan **id** |
+| GET         | `/api/users/search=:keyword`   | menampilkan data user berdasarkan **keyword** |
+| GET         | `/api/citys/:id`        | menampilkan data user berdasarkan **id_city** |
+
+Kita akan memanggil data dari database menggunakan Spring Data REST JPA `JpaRepository`, sehingga kita bisa membuat kodingan kita jauh lebih simpel. 
+
+### Setup Project
+
+Buat Project menggunakan [Spring web tool](https://start.spring.io/) atau melalui IDE (Spring Tool Suite, Eclipse, Intellij) untuk membuat Spring Boot project.
+
+### Dependency
+
+Dependency yang digunakan dalam project ini:
+
+* Spring REST Repository
+* Spring Data JPA
+* MySQL Driver
+* Lombok
+
+Struktur direktori project:
+
+![Struktur Project](struktur-project.png)
+
+Isi dependency dalam maven file di `pom.xml`
+
+```xml title=pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.6.7</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>com.tutorialtimposu</groupId>
+  <artifactId>springboot-backend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>springboot-backend</name>
+  <description>Spring Boot Backend</description>
+  <properties>
+    <java.version>17</java.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-rest</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
+```
+
+### Konfigurasi File Properties Spring Datasource, JPA dan Hibernate
+
+Tambahkan line dibawah ini ke dalam file `application.properties` yang berada di folder `src/main/resources`.
+
+```properties title=application.properties
+# jdbc properties
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/belajar
+spring.datasource.username=ucup
+spring.datasource.password=******
+
+# hibernate properties
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# custom base path url
+spring.data.rest.base-path=/api
+```
+
+Selain konfigurasi ke database kita juga set base-path urlnya ke `/api`.
+
+### Membuat Entity / Model
+
+Kita akan membuat dua entity ke dalam package `entity` berdasarkan tabel yang telah kita buat yaitu tabel `person` dan `city` .
+
+```java title=City.java
+package com.tutorialtimposu.backend.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "city")
+@Data
+public class City {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "city_name")
+    private String cityName;
+
+    @OneToMany(cascade = {
+            CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.REFRESH,
+            CascadeType.PERSIST,
+    }, mappedBy = "city")
+    private Set<Person> person;
+
+}
+```
+
+```java title=Person.java
+package com.tutorialtimposu.backend.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "person")
+@Data
+public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "email")
+    private String email;
+
+    @ManyToOne(cascade = {
+            CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.REFRESH,
+            CascadeType.PERSIST
+    })
+    @JoinColumn(name = "id_city")
+    private City city;
+
+}
+```
+
+Perhatikan pada bagian `cascade` di situ saya tidak mendefiniskan ke `all` karena kita memiliki 2 tabel yang berelasi dan kita tidak ingin agar jika data dihapus disalah satu tabel maka berpengaruh ke tabel lainnya, makanya saya mendefinisikan `cascade` nya secara manual dengan tidak memasukan `cascade` dengan tipe `CascadeType.REMOVE`.
+
+### Membuat Repository
+
+Kemudian kita akan membuat dua Repository DAO untuk masing-masing entity ke dalam package `dao`.
+
+```java title=CityRepository.java
+package com.tutorialtimposu.backend.dao;
+
+import com.tutorialtimposu.backend.entity.City;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CityRepository extends JpaRepository<City, Long> {
+}
+```
+
+```java title=PersonRepository
+package com.tutorialtimposu.backend.dao;
+
+import com.tutorialtimposu.backend.entity.Person;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PersonRepository extends JpaRepository<Person, Long> {
+}
+```
+
+Kita hanya membuat dua interface repository di atas menggunakan teknologi "Spring Magic" yaitu Spring Data REST JPA, dan kita tidak perlu tambahan class lagi, Spring akan secara otomatis membuatkan Service maupun REST Controllernya tanpa kita melakukan coding tambahan.
+
+Untuk mengujinya, jalankan aplikasi Spring Bootnya kemudian buka browser lalu ketik base-path url defaultnya ke `http://localhost:8080/api` sesuai konfigurasi properties yang sudah kita buat.
+
+![test browser](1.PNG)
+
+Spring secara otomatis sudah membuatkan kita REST Controller sendiri, perhatikan pada baris:
+
+```json
+"cities": {
+  "href": "http://localhost:8080/api/cities{?page,size,sort}",
+  "templated": true
+},
+"persons": {
+  "href": "http://localhost:8080/api/persons{?page,size,sort}",
+  "templated": true
+}
+```
+
+Dimana sudah membuatkan REST Controller untuk object `City` dengan nama `cities` ke url `http://localhost:8080/api/cities` dan object `Person` dengan nama `persons` ke url `http://localhost:8080/api/persons`. Spring secara otomatis membuatkan nama dari masing-masing URL api tersebut, secara magic.
+
+Tes Url `http://localhost:8080/api/cities` untuk meload data dari tabel `city` dari database.
+
+![test browser](2.PNG)
+
+Tes Url `http://localhost:8080/api/persons` untuk meload data dari tabel `person` dari database.
+
+![test browser](3.PNG)
+
+### Membatasi Akses REST
+
+Setelah berhasil membuat REST Api kita perlu menambahkan konfigurasi untuk menonaktifkan method `POST`, `PUT` dan `DELETE`.
+
+Buat class baru dan simpan ke dalam package `config`:
+
+```java title=DataRestConfig.java
+package com.tutorialtimposu.backend.config;
+
+import com.tutorialtimposu.backend.entity.City;
+import com.tutorialtimposu.backend.entity.Person;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+
+@Configuration
+public class DataRestConfig implements RepositoryRestConfigurer {
+
+    @Override
+    public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+        // Method yang ingin dinonaktifkan POST, PUT dan DELETE
+        HttpMethod[] unsupportedAction = {HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
+
+        config.getExposureConfiguration()
+                .forDomainType(Person.class)
+                .withItemExposure((metdata, httpMethods) -> httpMethods.disable(unsupportedAction))
+                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(unsupportedAction));
+
+        config.getExposureConfiguration()
+                .forDomainType(City.class)
+                .withItemExposure((metdata, httpMethods) -> httpMethods.disable(unsupportedAction))
+                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(unsupportedAction));
+    }
+}
+```
+
+Testing dengan aplikasi REST Client. Disini saya akan testing POST data baru:
+
+![test browser](4.PNG)
+
+Respon yang dihasilkan `405 - Method Not Allowed` kita tidak bisa mengakses method POST, berarti konfigurasi kita berhasil.
+
+
