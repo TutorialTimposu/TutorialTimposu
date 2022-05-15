@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[1095],{4364:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"spring boot","count":1,"permalink":"/blog/tags/spring-boot"}')}}]);
