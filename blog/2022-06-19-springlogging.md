@@ -13,8 +13,6 @@ Logging sangat berguna untuk memberikan informasi jalannya program kepada progra
 
 Di Java ada banyak framework untuk logging, namun yang paling gampang menggunakan Sl4j yang sudah dibundle dalam library [Lombok](https://projectlombok.org/).
 
-Jangan lupa untuk mengupdate project Maven kita.
-
 ## Menggunakan Logging Slf4j
 
 Secara default aplikasi spring boot bisa langsung menggunakan Slf4j, maka kita tinggal memasukan annotation `@Slf4j` ke dalam class kita, contoh:
