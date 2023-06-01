@@ -153,7 +153,7 @@ const config = {
               },
               {
                 label: 'Facebook',
-                href: 'https://facebook.com/timposulabs',
+                href: 'https://www.facebook.com/TutorialTimposu',
               },
               {
                 label: 'Instagram',
@@ -179,7 +179,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu. Built with Love ❤️.`,
+        copyright: `Copyright © 2022 - ${new Date().getFullYear()} Tutorial Timposu.`,
       },
       prism: {
         theme: lightCodeTheme,
