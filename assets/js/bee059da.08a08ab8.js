@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[3525],{4401:function(a){a.exports=JSON.parse('{"label":"java 8","permalink":"/blog/tags/java-8","allTagsPath":"/blog/tags","count":1}')}}]);
