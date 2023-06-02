@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[8466],{7279:s=>{s.exports=JSON.parse('{"label":"springboot","permalink":"/blog/tags/springboot","allTagsPath":"/blog/tags","count":2}')}}]);
