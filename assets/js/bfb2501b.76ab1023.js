@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[191],{1225:a=>{a.exports=JSON.parse('{"label":"android-java","permalink":"/blog/tags/android-java","allTagsPath":"/blog/tags","count":1}')}}]);
