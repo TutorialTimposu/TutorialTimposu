@@ -46,6 +46,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // algolia search
+      algolia: {
+        apiKey: "86bb44d643cacc23505267e5049716b9",
+        indexName: "TutorialTimposu",
+        appId: "EA5OG72GYH",
+      },
       navbar: {
         title: 'Tutorial Timposu',
         logo: {
