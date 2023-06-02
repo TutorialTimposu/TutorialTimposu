@@ -17,6 +17,16 @@ const config = {
   projectName: 'TutorialTimposu.github.io', // Usually your repo name.
   trailingSlash: false, // custom Github Pages
 
+  // Import custom script
+  scripts: [
+    // Google Ads
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4504493660273886',
+      async: true,
+      crossorigin: 'anonymous',
+    }
+  ],
+
   presets: [
     [
       'classic',
@@ -195,7 +205,6 @@ const config = {
     }),
 
   plugins: [
-   
     [
       '@docusaurus/plugin-content-docs',
       {
