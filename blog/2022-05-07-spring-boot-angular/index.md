@@ -1,6 +1,6 @@
 ---
 slug: spring-boot-angular
-title: Tutorial Membuat Aplikasi Web Spring Boot dan Angular (READ Only)
+title: Tutorial Membuat Aplikasi Web Spring Boot dan Angular - READ Only
 authors: topekox
 tags: [spring, spring boot, angular]
 ---

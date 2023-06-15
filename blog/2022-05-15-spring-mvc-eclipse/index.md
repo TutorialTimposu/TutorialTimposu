@@ -1,6 +1,6 @@
 ---
 slug: spring-mvc-eclipse
-title: Cara Membuat Project Spring MVC di Eclipse (XML Configuration)
+title: Cara Membuat Project Spring MVC di Eclipse - XML Configuration
 authors: topekox
 tags: [spring, spring mvc, eclipse]
 ---

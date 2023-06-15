@@ -1,6 +1,6 @@
 ---
 slug: service-android
-title: Membuat Service Android (Background & Foreground)
+title: Membuat Service Android - Background & Foreground
 authors: topekox
 tags: [android, android-java]
 ---

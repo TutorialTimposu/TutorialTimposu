@@ -1,6 +1,6 @@
 ---
 slug: spring-mvc-maven-xml
-title: Cara Membuat Project Spring MVC dengan Maven - XML Configuration (Bundle Tomcat)
+title: Cara Membuat Project Spring MVC dengan Maven - XML Configuration - Bundle Tomcat
 authors: topekox
 tags: [java, spring, spring mvc, eclipse]
 ---

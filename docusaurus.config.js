@@ -148,25 +148,33 @@ const config = {
             items: [
               {
                 label: 'About',
-                to: '#',
+                to: '/about',
               },
               {
-                label: 'Kontak',
-                to: '#',
+                label: 'Contact',
+                to: '/contact',
               },
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Archive',
+                to: '/blog/archive',
+              },
+              {
+                label: 'Terms & Conditions',
+                to: '/terms-conditions',
+              },
+              {
+                label: 'Privacy Policy',
+                to: '/privacy-policy',
               },
             ],
           },
           {
             title: 'Social Media',
             items: [
-              {
-                label: 'Youtube',
-                href: '#',
-              },
+              // {
+              //   label: 'Youtube',
+              //   href: '#',
+              // },
               {
                 label: 'Facebook',
                 href: 'https://www.facebook.com/TutorialTimposu',
@@ -195,7 +203,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2022 - ${new Date().getFullYear()} Tutorial Timposu.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu.`,
       },
       prism: {
         theme: lightCodeTheme,
