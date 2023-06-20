@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[3003],{5570:s=>{s.exports=JSON.parse('{"label":"postgre","permalink":"/blog/tags/postgre","allTagsPath":"/blog/tags","count":1}')}}]);
