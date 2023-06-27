@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[3914],{4006:s=>{s.exports=JSON.parse('{"label":"postgresql","permalink":"/blog/tags/postgresql","allTagsPath":"/blog/tags","count":2}')}}]);

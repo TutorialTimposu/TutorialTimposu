@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[4283],{8154:s=>{s.exports=JSON.parse('{"label":"rdbms","permalink":"/blog/tags/rdbms","allTagsPath":"/blog/tags","count":1}')}}]);
