@@ -144,7 +144,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'More',
+            title: 'Pages',
             items: [
               {
                 label: 'About',
