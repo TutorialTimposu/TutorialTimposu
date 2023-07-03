@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktimposu=self.webpackChunktimposu||[]).push([[6407],{5282:l=>{l.exports=JSON.parse('{"label":"jekyll","permalink":"/blog/tags/jekyll","allTagsPath":"/blog/tags","count":1}')}}]);
