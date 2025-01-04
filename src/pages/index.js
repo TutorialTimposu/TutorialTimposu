@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Halo, Selamat Datang di ${siteConfig.title}`}
-      description="Tutorial Pemrograman, Android, Linux Server Indonesia <head />">
+      description="Tutorial Pemrograman, Android, Sysadmin, Linux, Jaringan Komputer/Networking, Security <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

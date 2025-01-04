@@ -5,9 +5,11 @@ authors: topekox
 tags: [postgre, postgresql, database, rdbms]
 ---
 
-Pada artikel sebelumnya kita sudah belajar tentang [perintah dasar postgreSql](/blog/perintah-dasar-postgre), nah pada artikel ini kita akan membahas sedikit lebih detail tentang bagaimana perintah mengelola user di postreSQL
+Pada artikel ini kita akan membahas sedikit lebih detail tentang bagaimana perintah mengelola user di postreSQL
 
 <!--truncate-->
+
+![unsplash](https://images.unsplash.com/photo-1526226128118-9ef71fc2f34b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 ### Membuat user
 

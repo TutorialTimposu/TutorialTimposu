@@ -12,6 +12,8 @@ Semua materi dalam seri tutorial ini merupakan materi dasar bagi:
 * Pelajar
 * Programmer Pemula 
 * Backend Engineer 
-* Android Engineer maupun 
+* Android Engineer
+* Security Enginer 
 * Game Development
+* dll.
 

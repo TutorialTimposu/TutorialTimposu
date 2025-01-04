@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        TutorialTimposu berupaya menyajikan materi pemrograman
+        TimposuLabs berupaya menyajikan materi
         berkualitas dengan menggunakan Bahasa Indonesia.
       </>
     ),
@@ -18,7 +18,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Materi semua diajarkan dari awal sampai akhir. 
+        Materi semua diajarkan terstruktur. 
         Setiap materi pemrograman disusun sesuai dengan alurnya.
       </>
     ),
@@ -28,8 +28,8 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Mulailah untuk belajar bahasa pemrograman yang kamu ingikan.
-        Kamu bisa mulai dari sekarang untuk mengembangkan dirimu.
+        Mulailah untuk belajar materi yang kamu ingikan.
+        Kamu bisa mulai dari sekarang untuk mengembangkan diri.
       </>
     ),
   },

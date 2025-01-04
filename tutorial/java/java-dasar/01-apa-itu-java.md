@@ -1,41 +1,45 @@
 ---
 sidebar_position: 3
-title: 'Apa itu Java'
+title: 'Apa itu Java?'
 ---
 
 ## Sejarah
 
-Bahasa Pemrograman Java pertama kali dikembangkan oleh perusahaan Sun Microsystems yang dibuat oleh James Gosling bersama timnya dan diperkenalkan ke publik pada tahun  1995. Bahasa Pemrograman ini awalnya bernama '*Oak*' tetapi karena masalah lisensi (nama tersebut sudah terdaftar oleh perusahaan lain), James Gosling dan timnya mengganti nama Oak menjadi Java.
+Bahasa Pemrograman Java pertama kali dikembangkan oleh perusahaan Sun Microsystems, yang dibuat oleh James Gosling bersama timnya dan diperkenalkan ke publik pada tahun  1995. Bahasa Pemrograman ini awalnya bernama '*Oak*' tetapi karena masalah lisensi (nama tersebut sudah terdaftar oleh perusahaan lain), James Gosling dan timnya mengganti nama Oak menjadi Java.
 
-Sejak awal rilis, memang Java dibuat untuk tujuan cross platform, agar bisa dijalankan di berbagai sistem operasi maupun perangkat. Itulah mengapa Java memiliki jargon *Write Once, Run Anywhere*.
+|![James Gosling](/img/java/james-gosling.jpg "James Gosling")|
+|:--:|
+|<sup>_James Gosling_</sup>|
+
+## Fitur Java
 
 Java memiliki fitur:
 
-* Object oriented, sederhana dan mudah dimengerti.
+* _Object oriented_, sederhana dan mudah dimengerti.
 * Kuat dan aman.
 * Netral terhadap arsitektur system (OS, Prosessor) dan bisa dijalankan di manapun.
 * Kinerja yang tinggi.
-* Interpreted, threaded dan dinamis.
+* _Interpreted_, _threaded_ dan dinamis.
 
-Pada tahun 2006 Sun Microsystems merilis sebagian besar source code Java manjadi free dan opensource dibawah lisensi GNU General Public License (GPL). Tahun 2007, Sun Microsystems menyelesaikan prosesnya, membuat semua source code inti Java menjadi free dan opensource, kecuali sebagian kecil kode yang hak ciptanya tidak dimiliki Sun Microsystems.
+Pada tahun 2006 Sun Microsystems merilis sebagian besar source code Java manjadi _free_ dan _opensource_ dibawah lisensi GNU General Public License (GPL). Tahun 2007, Sun Microsystems menyelesaikan prosesnya, membuat semua source code inti Java menjadi free dan opensource, kecuali sebagian kecil kode yang hak ciptanya tidak dimiliki Sun Microsystems.
 
 Pada tahun 2010 Sun Microsystems dibeli oleh Oracle.
 
 ## Versi Java
 
-Jika melihat tabel perilisan Java, maka penamaan versi itu mengalami beberapa perubahan dari awalnya JDK x.x, menjadi J2SE x.x kemudian menjadi Java SE x.x. Jika melihat jadwal perilisan Java dari versi 1 sampai versi 8, dirilis tiap beberapa tahun sekali, tetapi mulai dari versi 9 dirilis tiap 6 bulan sekali. Tetapi terdapat versi yang LTS (Long Term Support), yang mendapat dukungan update dan security pacth lebih lama dibanding versi non-LTS.
+Jika melihat tabel perilisan Java, maka penamaan versi itu mengalami beberapa perubahan dari awalnya _JDK x.x_, menjadi _J2SE x.x_ kemudian menjadi _Java SE x.x_. Jika melihat jadwal perilisan Java dari versi 1 sampai versi 8, dirilis tiap beberapa tahun sekali, tetapi mulai dari versi 9 dirilis tiap 6 bulan sekali. Tetapi terdapat versi yang LTS (_Long Term Support_), yang mendapat dukungan update dan _security pacth_ lebih lama dibanding versi non-LTS.
 
 ![Java Version](/img/java/java-version.png "Java Version")
 
 Info selengkapnya lihat di [Wikipedia](https://en.wikipedia.org/wiki/Java_version_history) dan [EndOfLife](https://endoflife.date/java).
 
-## Java Platforms / Edisi
+## Java _Platforms_ / Edisi
 
-Saat  ini Java memiliki 3 edisi:
+Saat ini Java memiliki setidaknya ada 3 platform:
 
-1. **Java SE (Java Standard Edition)**, adalah teknologi standard Java untuk pembuatan aplikasi yang bisa berjalan di dalam PC maupun server seperti Desktop, Database, Network, Input Output, St dll.
-2. **Java EE (Java Enterprise Edition)**, adalah teknologi Java yang ditujukan untuk pembuatan aplikasi skala besar (enterprise) contohnya banyak dipakai di perusahaan-perusahaan skala besar. 
-3. **Java ME (Java Micro Edition)**, adalah teknologi Java untuk  tujuan pembuatan aplikasi Mobile Devices, Embedded Devices, Java for TV dan Java Card.
+1. **Java SE (_Java Standard Edition_)**, adalah teknologi standard Java yang ditujukan untuk mengembangkan aplikasi Java di desktop maupun di server.
+2. **Java EE (_Java Enterprise Edition_)**, adalah teknologi Java yang ditujukan untuk pembuatan aplikasi skala besar (_enterprise_) yang dikembangkan dengan mengintegrasikan fitur-fitur yang selaras dengan kebutuhan industri, contohnya banyak dipakai di perusahaan-perusahaan skala besar seperti perbankan dll. Saat ini  __Java EE__ sudah berganti nama menjadi __Jakarta EE__ karena Oracle mengalihkan kepemilikannya ke Eclipse Foundation pada tahun 2019.
+3. **Java ME (_Java Micro Edition_)**, adalah teknologi Java untuk  tujuan pembuatan aplikasi pada _Mobile Devices_ dan _Embedded Devices_. Contohnya untuk perangkat seperti micro-controllers, sensors, ATM, telepon seluler, TV set-top boxes, printers dll.
 
 ## Java Bisa Bikin Apa Saja?
 
@@ -46,14 +50,24 @@ Saat ini banyak perangkat yang menggunakan aplikasi yang dibuat menggunakan Java
 3. Banckend App (contoh perusahaan yang menggunakan Netflix, Amazon, Alibaba dll).
 4. Big Data (contoh Apache Hadoop, Apache Kafka, Elasticsearch dll)
 5. Mobile App dan Android App.
-6. Games(contoh Minecraft)
-7. dll.
+6. Games (contoh Minecraft).
+7. Embedded system app.
+8. dll.
 
 Bayangkan kita hanya perlu satu bahasa pemrograman tapi bisa membuat banyak jenis aplikasi.
 
+![Applications of java](/img/java/Applications-of-Java.png "Applications of java")
+_Sumber: https://softjourn.com/insights/is-java-still-used_
+
+## Java Bisa _Running_ Dimana Saja?
+
+Sejak awal rilis, memang Java dibuat untuk tujuan _cross platform_, agar bisa dijalankan di berbagai sistem operasi maupun perangkat. Itulah mengapa Java memiliki jargon *Write Once, Run Anywhere*. Semua itu bisa terjadi karena Java memiliki teknologi _Java Virtual Machine_ (JVM).
+
+![Java Programming Model](/img/java/java_programming_flow.png "Java Programming Flow Model")
+
 ## Kenapa Belajar Java?
 
-Dari berbagai situs comparation, bahasa pemrograman Java selalu masuk kedalam 5 besar bahasa pemrograman paling populer di dunia dalam kurun waktu 10 tahun terakhir. Banyak perusahaan baik skala kecil maupun besar menggunakan Java, hal ini dikarenakan kemampuan Java untuk membuat aplikasi segala sektor baik itu Desktop, Backend, Web, Android, Game dan lainnya. Selain itu ekosistem Java sudah besar dan kuat serta didukung oleh komunitas yang sudah besar.
+Dari berbagai situs comparation, bahasa pemrograman Java selalu masuk kedalam 5 besar bahasa pemrograman paling populer di dunia dalam kurun waktu 10 tahun terakhir. Banyak perusahaan baik skala kecil maupun besar menggunakan Java, hal ini dikarenakan kemampuan Java untuk membuat aplikasi segala sektor, baik itu untuk Desktop, Backend, Web, Android, Embedded Devices, Game dan lainnya. Selain itu ekosistem Java sudah besar dan kuat serta didukung oleh komunitas yang sudah besar.
 
 [![TIOBE Programming Community Index](/img/java/index.png "TIOBE Programming Community Index")](https://www.tiobe.com/tiobe-index/)
 
@@ -66,3 +80,13 @@ Logo Java pertama dibuat pada tahun 1996, logo Java diprototipekan sebagai cangk
 :::caution
 Tidak sedikit yang mengira Java adalah Javascript, padahal kedua bahasa pemrograman ini jelas berbeda.
 :::
+
+## Referensi
+
+* [https://u-next.com/blogs/java/history-of-java/](https://u-next.com/blogs/java/history-of-java/)
+* [https://www.tiobe.com/tiobe-index/](https://www.tiobe.com/tiobe-index/)
+* [https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/overview.htm](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/overview.htm)
+* [https://blogs.oracle.com/javamagazine/post/transition-from-java-ee-to-jakarta-ee](https://blogs.oracle.com/javamagazine/post/transition-from-java-ee-to-jakarta-ee)
+* [https://www.tug.ca/articles/Volume12/V12N4/V12N4_Javier_Java.html](https://www.tug.ca/articles/Volume12/V12N4/V12N4_Javier_Java.html)
+* [https://en.wikipedia.org/wiki/List_of_Java_virtual_machines](https://en.wikipedia.org/wiki/List_of_Java_virtual_machines)
+* [https://softjourn.com/insights/is-java-still-used](https://softjourn.com/insights/is-java-still-used)

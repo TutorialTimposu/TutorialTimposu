@@ -2,10 +2,10 @@
 title: Contact
 ---
 
-# Kontak TutorialTimposu
+# Kontak Saya
 
 Website ini masih dimaintenance oleh Ucup Topekox, jadi jika ada pertanyaan, kritik, saran dan unek-unek silahkan kirim ke:
 
-email: [ucup.topekox@gmail.com](mailto:ucuptopekox@gmail.com)
+email: __ucup.topekox[at]gmail.com__
 
-Salam baik dari TutorialTimposu.
+Salam baik dari TimposuLabs.

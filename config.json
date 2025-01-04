@@ -1,8 +1,8 @@
 {
-    "index_name": "TutorialTimposu",
-    "start_urls": ["https://www.tutorialtimposu.com/"],
+    "index_name": "TimposuLabs",
+    "start_urls": ["https://www.timposulabs.com/"],
     "sitemap_urls": [
-      "https://www.tutorialtimposu.com/sitemap.xml"
+      "https://www.timposulabs.com/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": ["/tests"],

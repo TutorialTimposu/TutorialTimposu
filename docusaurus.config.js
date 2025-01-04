@@ -1,20 +1,20 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tutorial Timposu',
-  tagline: 'Tempat Belajar Pemrograman Yang Asik dan Menyenangkan',
-  url: 'https://tutorialtimposu.com',
+  title: 'TimposuLabs',
+  tagline: 'Tempat Belajar Yang Asik dan Menyenangkan',
+  url: 'https://timposulabs.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'TutorialTimposu', // Usually your GitHub org/user name.
-  projectName: 'TutorialTimposu.github.io', // Usually your repo name.
+  organizationName: 'TimposuLabs', // Usually your GitHub org/user name.
+  projectName: 'TimposuLabs.github.io', // Usually your repo name.
   trailingSlash: false, // custom Github Pages
 
   // Import custom script
@@ -35,12 +35,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          editUrl: 'https://github.com/TimposuLabs/TimposuLabs.github.io/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TimposuLabs/TimposuLabs.github.io/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,16 +56,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // algolia search
-      algolia: {
-        apiKey: "86bb44d643cacc23505267e5049716b9",
-        indexName: "TutorialTimposu",
-        appId: "EA5OG72GYH",
-      },
+      // // algolia search
+      // algolia: {
+      //   apiKey: "86bb44d643cacc23505267e5049716b9",
+      //   indexName: "TimposuLabs",
+      //   appId: "EA5OG72GYH",
+      // },
       navbar: {
-        title: 'Tutorial Timposu',
+        title: 'TimposuLabs',
         logo: {
-          alt: 'Tutorial Timposu Logo',
+          alt: 'TimposuLabs Logo',
           src: 'img/logo-topekox.svg',
         },
         items: [
@@ -124,17 +124,17 @@ const config = {
           // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/TutorialTimposu/forum/discussions',
+            href: 'https://github.com/TimposuLabs/forum/discussions',
             label: 'Forum',
             position: 'right',
           }, 
           {
-            href: 'https://saweria.co/tutorialtimposu',
+            href: 'https://saweria.co/TimposuLabs',
             label: 'Donasi',
             position: 'right',
           },
           {
-            href: 'https://github.com/TutorialTimposu',
+            href: 'https://github.com/TimposuLabs',
             label: 'GitHub',
             position: 'right',
           },          
@@ -177,7 +177,7 @@ const config = {
               // },
               {
                 label: 'Facebook',
-                href: 'https://www.facebook.com/TutorialTimposu',
+                href: 'https://www.facebook.com/TimposuLabs',
               },
               {
                 label: 'Instagram',
@@ -190,20 +190,20 @@ const config = {
             items: [
               {
                 label: 'Donasi',
-                href: 'https://saweria.co/tutorialtimposu',
+                href: 'https://saweria.co/TimposuLabs',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/TutorialTimposu',
+                href: 'https://github.com/TimposuLabs',
               },
               {
                 label: 'Forum',
-                href: 'https://github.com/TutorialTimposu/forum/discussions',
+                href: 'https://github.com/TimposuLabs/forum/discussions',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tutorial Timposu.`,
+        copyright: `Copyright © ${new Date().getFullYear()} TimposuLabs. Made with Love ❤️.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -220,7 +220,7 @@ const config = {
           path: 'tutorial/java/',
           routeBasePath: 'java',
           sidebarPath: require.resolve('./sidebars.js'),
-          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TimposuLabs/TimposuLabs.github.io/tree/main/',
       },
     ],
     [
@@ -230,8 +230,18 @@ const config = {
           path: 'tutorial/python',
           routeBasePath: 'python',
           sidebarPath: require.resolve('./sidebars.js'),
-          // editUrl: 'https://github.com/TutorialTimposu/TutorialTimposu.github.io/tree/main/',
+          // editUrl: 'https://github.com/TimposuLabs/TimposuLabs.github.io/tree/main/',
       },
+    ],
+    // search local plugin
+    // https://github.com/easyops-cn/docusaurus-search-local
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+       ({
+         hashed: true,
+         docsRouteBasePath: '/',
+         searchResultLimits: 10,
+      }),
     ],
   ],
 };
