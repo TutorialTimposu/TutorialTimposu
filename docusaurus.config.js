@@ -124,15 +124,16 @@ const config = {
           // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/TimposuLabs/forum/discussions',
-            label: 'Forum',
-            position: 'right',
-          }, 
-          {
             href: 'https://saweria.co/TimposuLabs',
             label: 'Donasi',
             position: 'right',
           },
+          {
+            href: 'https://github.com/TimposuLabs/forum/discussions/categories/tanya-jawab',
+            label: 'Diskusi',
+            position: 'right',
+          }, 
+          
           {
             href: 'https://github.com/TimposuLabs',
             label: 'GitHub',
@@ -197,13 +198,13 @@ const config = {
                 href: 'https://github.com/TimposuLabs',
               },
               {
-                label: 'Forum',
-                href: 'https://github.com/TimposuLabs/forum/discussions',
+                label: 'Diskusi',
+                href: 'https://github.com/TimposuLabs/forum/discussions/categories/tanya-jawab',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} TimposuLabs. Made with Love ❤️.`,
+        copyright: `${new Date().getFullYear()} &bull; TimposuLabs &bull; Build with Love ❤️`,
       },
       prism: {
         theme: lightCodeTheme,
