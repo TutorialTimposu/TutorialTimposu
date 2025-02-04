@@ -69,6 +69,7 @@ nvm uninstall 16.20.0
 ```
 
 * Untuk pentunjuk lengkap command NVM cukup ketik perintah `nvm`:
+
 ```
 C:\Users\Ucup>nvm
 

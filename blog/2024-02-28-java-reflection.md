@@ -2,7 +2,7 @@
 slug: java-reflection
 title: Apa itu Java Reflection
 authors: topekox
-tags: [java]
+tags: [java, java reflection]
 ---
 
 Java Reflection adalah fitur dalam bahasa pemrograman Java yang memungkinkan program untuk memeriksa dan memanipulasi dirinya sendiri. Fitur ini memungkinkan program untuk melihat struktur internalnya, seperti class, interface, method, dan field. 
@@ -131,7 +131,7 @@ public class ValidationUtil {
 		Field[] fields = cls.getDeclaredFields();
 
 		for (var field : fields) {
-			field.setAccessible(true);
+			field.setAccessible(true); // mengakses semua  access modifier pada field
 			if (field.getAnnotation(NotBlank.class) != null) {
 				try {
 					String value = (String) field.get(object);
@@ -170,7 +170,7 @@ Exception in thread "main" java.lang.RuntimeException: Field username is Blank
 	at reflection.ReflectionApp.main(ReflectionApp.java:8)
 ```
 
-Output diatas terjadi  exception karena kita tidak memasukan value pada field `username` atau `password`. Jika kita memasukan nilai pada `username` dan `password` seperti berikut:
+Output diatas terjadi  exception karena kita tidak memasukan value pada field `username` atau `password`. Jika kita memasukan nilai pada `username` dan `password` seperti di bawah ini maka exception di atas tidak terjadi:
 
 ```java
 UserRequest request = new UserRequest();
@@ -179,6 +179,10 @@ request.setPassword("rahasia");
 		
 ValidationUtil.validationReflection(request);
 ```
+
+## Kesimpulan
+
+Java Reflection mungkin jarang digunakan dalam prakteknya sehari-hati tapi sangat berguna ketika digunakan bersama Java Annotation dalam pembuatan Framework Java.
 
 ## Referensi
 

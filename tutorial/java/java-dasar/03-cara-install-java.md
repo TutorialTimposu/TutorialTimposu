@@ -70,13 +70,24 @@ Jika berhasil, kita sudah sudah siap membuat program Java di Windows.
 
 ### Setting Path di Linux
 
-Untuk setting path di Linux, kita perlu menambahkan kode dibawah ini ke dalam file `.bashrc` atau `.profile` atau `.zshrc`. Misalnya lokasi direktori JDK berada di `/opt/jdk-17.0.2/`.
+Untuk setting path di Linux, kita perlu menambahkan kode dibawah ini ke dalam file `.bashrc` atau `.profile` atau `.zshrc` yang ada pada directory home system anda. Misalnya lokasi direktori JDK berada di `/opt/jdk-17.0.2/`.
 
-```bash
-export PATH=/opt/jdk-17.0.2/bin:$PATH
+1. Pindah ke home directory anda:
+
+```
+cd $HOME
 ```
 
-Selanjutnya kita akan mencoba JDK dan JRE apakah sudah terinstal dengan baik dan benar di Linux. Buka terminal console dan masukan perintah `java -version` dan `javac -version`.
+2. Buka file `.bashrc` atau `.profile` atau `.zshrc`.
+
+3. Tambahkan baris dibawah ini, ganti direktori JDK dengan lokasi direktori instalasi Java anda.
+
+```
+export JAVA_HOME=/opt/jdk-17.0.2
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+Selanjutnya kita akan mencoba JDK dan JRE apakah sudah terinstal dengan baik dan benar di Linux. Sebaiknya lakukan restart komputer anda dan buka terminal console dan masukan perintah `java -version` dan `javac -version`.
 
 Perintah `java -version` untuk melakukan pengecekan terhadap versi JRE yang ada. Jika versi Java keluar seperti gambar dibawah ini, maka JRE berhasil terinstall.
 

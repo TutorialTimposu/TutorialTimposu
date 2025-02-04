@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: 'TimposuLabs',
   tagline: 'Tempat Belajar Yang Asik dan Menyenangkan',
-  url: 'https://timposulabs.com',
+  url: 'https://timposulabs.github.io.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -204,7 +204,7 @@ const config = {
             ],
           },
         ],
-        copyright: `${new Date().getFullYear()} &bull; TimposuLabs &bull; Build with Love ❤️`,
+        copyright: `🐒 ${new Date().getFullYear()} &bull; TimposuLabs &bull; Build with Love ❤️`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -24,9 +24,13 @@ Golang banyak digunakan di beberapa perusahaan besar seperti Google, IBM, BBC, A
 Golang menawarkan banyak manfaat untuk skala enterprise seperti:
 
 1. **Fleksibilitas**: Golang dapat digunakan untuk mengembangkan berbagai aplikasi mulai dari aplikasi sederhana hingga aplikasi yang kompleks pada perusahaan. Tidak hanya mampu memenuhi kebutuhan perusahaan teknologi tetapi juga industri lain seperti keuangan, media dll.
+
 2. **Dukungan Lintas Platform**: Perusahaan dapat menggunakan bahasa pemrograman Golang untuk membangun aplikasi lintas platform. Bahasa ini mendukung berbagai platform termasuk Windows, Linux, dan platform seluler.
+
 3. **Pengembangan Lebih Cepat**: Perusahaan lebih menyukai bahasa pemrograman yang membantu mereka membangun aplikasi lebih cepat. Golang dapat dikembangkan dengan cepat. Tidak ada Mesin Virtual di lingkungan Go dan kodenya langsung dikompilasi ke kode mesin, ini membuat kompilasi lebih cepat. Dengan kompiler yang memproduksi, hanya satu file yang dapat dieksekusi dan dapat diunggah dari mana saja, eksekusi kode juga menjadi cepat.
+
 4. **Skalabilitas**: Pertimbangan utama lainnya untuk tim pengembangan aplikasi perusahaan saat memilih bahasa pemrograman. Golang mendukung skalabilitas. Ini menggunakan fungsi dasar yang disebut *Goroutines* yang dapat berjalan secara independen dan simultan dan mandiri untuk memungkinkan penanganan banyak tugas sekaligus.
+
 5. **Kinerja Aplikasi**: Faktor penentu keberhasilan suatu aplikasi adalah kinerjanya. Golang menawarkan kinerja luar biasa dan pengalaman aplikasi yang menyenangkan. Membutuhkan lebih sedikit sumber daya sistem dan berjalan dengan baik pada perangkat yang lebih lama. Karena mengkonsumsi lebih sedikit RAM, aplikasi ini juga stabil dengan lebih sedikit kemungkinan aplikasi utuk crash.
 
 Selain 5 alasan di atas mengapa perusahaan harus memilih Golang, alasan lainnya adalah ketersediaan programmer Golang. Bahasanya mudah dipelajari, jadi pengembang aplikasi Anda dapat dengan cepat membangun aplikasi Golang dalamnya.
