@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: 'TimposuLabs',
   tagline: 'Tempat Belajar Yang Asik dan Menyenangkan',
-  url: 'https://timposulabs.github.io.com',
+  url: 'https://timposulabs.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
