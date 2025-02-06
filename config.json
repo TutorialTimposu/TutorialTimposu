@@ -1,8 +1,8 @@
 {
     "index_name": "TimposuLabs",
-    "start_urls": ["https://timposulabs.github.io/"],
+    "start_urls": ["https://timposulabs.com/"],
     "sitemap_urls": [
-      "https://timposulabs.github.io/sitemap.xml"
+      "https://timposulabs.com/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": ["/tests"],
