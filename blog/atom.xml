@@ -2,11 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://timposulabs.github.io/blog</id>
     <title>TimposuLabs Blog</title>
-    <updated>2024-10-05T00:00:00.000Z</updated>
+    <updated>2025-01-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://timposulabs.github.io/blog"/>
     <subtitle>TimposuLabs Blog</subtitle>
     <icon>https://timposulabs.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Cara melihat log service pada Linux]]></title>
+        <id>https://timposulabs.github.io/blog/melihat-log-service-linux</id>
+        <link href="https://timposulabs.github.io/blog/melihat-log-service-linux"/>
+        <updated>2025-01-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Log adalah tool yang memberikan informasi berharga untuk pemecahan masalah, keamanan, audit, analisis kinerja, pemantauan, dan pemeliharaan sistem. Tanpa log, akan sulit untuk memahami apa yang terjadi di dalam sistem, mengidentifikasi masalah, atau memastikan keamanan dan kinerja yang optimal.]]></summary>
+        <content type="html"><![CDATA[<p>Log adalah tool yang memberikan informasi berharga untuk pemecahan masalah, keamanan, audit, analisis kinerja, pemantauan, dan pemeliharaan sistem. Tanpa log, akan sulit untuk memahami apa yang terjadi di dalam sistem, mengidentifikasi masalah, atau memastikan keamanan dan kinerja yang optimal.</p>
+<p>Dalam linux service yang sedang berjalan memiliki log, biasanya disimpan dalam direktori <code>/var/log</code> atau di direktori lain di masing-masing aplikasi yang memiliki service. Contoh kita melihat log sistem pada Ubuntu yang ada pada <code>syslog</code> dengan perintah.</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cat /var/log/syslog</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Jika ingin disimpan dalam sebuah file bisa menggunakan perintah:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cat /var/log/syslog &gt;&gt; tes.txt</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="melihat-log-service">Melihat log service<a href="https://timposulabs.github.io/blog/melihat-log-service-linux#melihat-log-service" class="hash-link" aria-label="Direct link to Melihat log service" title="Direct link to Melihat log service">​</a></h2>
+<p>Untuk melihat log pada service yang sedang berjalan dapat menggunakan perintah <code>journalctl</code>.</p>
+<p>Contoh misalnya saya memiliki service Postgresql 17 dan ingin melihat log servicenya:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">journalctl -u postgresql-17.service</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Jika ingin disimpan dalam sebuah file bisa menggunakan perintah:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">journalctl -u postgresql-17.service &gt;&gt; postgresql17.txt</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Lihat juga:</p>
+<ul>
+<li><a href="https://unix.stackexchange.com/questions/225401/how-to-see-full-log-from-systemctl-status-service" target="_blank" rel="noopener noreferrer">https://unix.stackexchange.com/questions/225401/how-to-see-full-log-from-systemctl-status-service</a></li>
+</ul>]]></content>
+        <author>
+            <name>Ucup TopekoX</name>
+        </author>
+        <category label="linux" term="linux"/>
+        <category label="log" term="log"/>
+        <category label="perintah linux" term="perintah linux"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Belajar Java Comparator]]></title>
         <id>https://timposulabs.github.io/blog/java-comparator-interface</id>
@@ -949,21 +977,5 @@
         </author>
         <category label="golang" term="golang"/>
         <category label="enterprise" term="enterprise"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://timposulabs.github.io/blog/welcome</id>
-        <link href="https://timposulabs.github.io/blog/welcome"/>
-        <updated>2022-03-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Selamat Datang di Tutorial Timposu. Website ini dibuat dengan tujuan untuk membagikan tutorial bahasa pemrograman maupun ilmu komputer seputarnya. Website ini dibuat dan di-maintenance oleh Ucup Topekox. Sedangkan latar belakang pembuatan website justru untuk dokumentasi, kenapa dokumentasi?.]]></summary>
-        <content type="html"><![CDATA[<p>Selamat Datang di Tutorial Timposu. Website ini dibuat dengan tujuan untuk membagikan tutorial bahasa pemrograman maupun ilmu komputer seputarnya. Website ini dibuat dan di-maintenance oleh <a href="https://topekox.github.io/" target="_blank" rel="noopener noreferrer">Ucup Topekox</a>. Sedangkan latar belakang pembuatan website justru untuk dokumentasi, kenapa dokumentasi?.</p>
-<p>Iya benar dokumentasi karena sebenarnya saya dan mungkin hampir semua manusia memiliki sifat pelupa, oleh karena itu saya berinisiatif untuk mendokumentasikan apa yang saya telah pelajari dan ketahui. Selain itu disela-sela waktu saya juga sering mengajar, dan karena biasanya ada saja siswa yang meminta materi langsung saja saya arahkan ke website ini.</p>
-<p>Penyusunan tutorial pada website ini sedemikianrupa dibuat dengan jalur roadmap yang jelas sehingga teman-teman dapat belajar dengan lebih terarah. Selain itu pada website ini juga terdapat artikel blog yang berisi informasi seputar dunia pemrograman dan lainnya. Apabila ada pertanyaan seputar website ini silahkan hubungi saya di <a href="mailto:ucup.topekox@gmail.com" target="_blank" rel="noopener noreferrer">ucup.topekox@gmail.com</a> ataupun di media sosial saya.</p>
-<p>Akhir kata semoga website ini dapat berguna bagi teman-teman semua, dan apabila ingin mensupport website ini, sudi kiranya teman-teman membagikan/memberitahukan website kepada siapapun yang membutuhkan, agar ilmunya tidak berhenti anda saja.</p>
-<p><img decoding="async" loading="lazy" alt="Quotes" src="https://timposulabs.github.io/assets/images/menulis-48c48b9b3c08e4216ac196b09962f68a.jpg" width="800" height="500" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>Ucup TopekoX</name>
-        </author>
-        <category label="blog" term="blog"/>
     </entry>
 </feed>
