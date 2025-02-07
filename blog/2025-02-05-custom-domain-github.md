@@ -42,6 +42,8 @@ Jangan lupa buat file dengan nama `CNAME` di root direktori static github pages 
 timposulabs.com
 ```
 
+File ini nantinya di baca oleh github pages sebagai nama domain kita setiap kita melakukan deploy he host github repository.
+
 :::success
 Untuk video pengaturan domain dapat dilihat pada:
 
