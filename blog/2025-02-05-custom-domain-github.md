@@ -36,6 +36,11 @@ Jika berhasil, maka akan seperti gambar di bawah ini.
 
 !["Konfigurasi DNS"](/img/general/ghpages2.png)
 
+Jangan lupa buat file dengan nama `CNAME` di root direktori static github pages anda dan isi file tersebut dengan nama domain anda, contoh isi file `CNAME`:
+
+```
+timposulabs.com
+```
 
 :::success
 Untuk video pengaturan domain dapat dilihat pada:
