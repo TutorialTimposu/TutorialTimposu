@@ -92,7 +92,7 @@ chown 400 /home/ucup/myapp.conf
 ```
 
 :::info
-Selengkapnya parameter konfigurasi: https://docs.spring.io/spring-boot/docs/2.2.0.RC1/reference/html/deployment.html#deployment-script-customization-when-it-runs
+Selengkapnya parameter konfigurasi: [https://docs.spring.io/spring-boot](https://docs.spring.io/spring-boot/docs/2.2.0.RC1/reference/html/deployment.html#deployment-script-customization-when-it-runs)
 :::
 
 
