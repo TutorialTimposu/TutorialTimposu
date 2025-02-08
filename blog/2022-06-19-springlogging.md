@@ -2,7 +2,7 @@
 slug: spring-logging
 title: Cara Mudah Membuat Logging di Spring Boot
 authors: topekox
-tags: [spring, springboot, logging]
+tags: [spring, springboot, log]
 ---
 
 Logging sangat berguna untuk memberikan informasi jalannya program kepada programmer, atau untuk menganalisa baik masih dalam proses debug developer maupun log ketika sudah dalam production. 

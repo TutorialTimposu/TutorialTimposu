@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/timposulabs.png',
   organizationName: 'TimposuLabs', // Usually your GitHub org/user name.
   projectName: 'TimposuLabs.github.io', // Usually your repo name.
   trailingSlash: false, // custom Github Pages
