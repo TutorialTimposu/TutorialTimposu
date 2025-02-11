@@ -9,6 +9,10 @@ Interface Comparable pada Java digunakan untuk menentukan urutan objek pada clas
 
 <!--truncate-->
 
+:::info
+Class-class umum seperti `String`, `Integer` dan sebagainya, sudah mengimplementasikan interface `Comparable`, sehingga bisa langsung dilakukan sorting terhadap object-object tersebut.
+:::
+
 #### Contoh 1: membuat perbandingan untuk melakukan sorting integer
 
 ```java

@@ -53,6 +53,7 @@ public class DemoComparator {
 		}
 	}
 	
+	// membuat comparator
 	static class SortUtil implements Comparator<Student> {
 
 		@Override
@@ -154,6 +155,7 @@ public class DemoComparatorMultiField {
 		}
 	}
 
+	// membuat comparator
 	static class SortUtil implements Comparator<Student> {
 
 		@Override
