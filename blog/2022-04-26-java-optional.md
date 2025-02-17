@@ -99,9 +99,8 @@ Yang berada dalam blok komentar adalah cara manual
 //            customer = repository.createNew();
 //        }
 
-String nameUpper = Optional.ofNullable(customer.getName())
-                .map(value -> value.toUpperCase())
-                .orElse("");
+Customer customer = Optional.ofNullable(repository.findById("id"))
+                .orElseGet(() -> repository.createNew());
 ```
 
 ## Operation if Not Null
