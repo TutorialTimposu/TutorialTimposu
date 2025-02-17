@@ -39,7 +39,7 @@ public class DemoHashMap {
 
 ## LinkedHashMap
 
- `LinkedHashMap` adalah implementasi `Map` dengan menggunakan Double Linked List. Pada `LinkedHashMap` data akan disimpan berurutan dalam Linked List sesuai urutan kita menyimpan data. Namun perlu diperhatikan, proses get data di `LinkedHashMap` akan semakin lambat,
+ `LinkedHashMap` adalah implementasi `Map` dengan menggunakan Double Linked List. Pada `LinkedHashMap` data akan disimpan berurutan dalam Linked List sesuai urutan waktu kita menyimpan data. Namun perlu diperhatikan, proses get data di `LinkedHashMap` akan semakin lambat,
  karena harus melakukan iterasi data linked list terlebih dahulu. Gunakan `LinkedHashMap` jika memang kita lebih mementingkan iterasi/urutan data Map nya.
 
  ```java
