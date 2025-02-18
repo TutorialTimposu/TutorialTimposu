@@ -39,7 +39,7 @@ Untuk menambahkan environment di Intellij IDEA Community caranya sama seperti se
 
 ## Set Profiles
 
-Untuk memasukan profiles ketika aplikasi Spring Boot dijalankan kita dapat memasukan nama profiles ke dalam CLI atau menu `Edit Configuration...` dengan perintah di bawah ini:
+Untuk memasukan profiles ketika aplikasi Spring Boot dijalankan kita dapat memasukan nama profiles ke dalam CLI atau menu `Edit Configuration...`, contoh nama profiles `dev` masukan nama profiles dengan perintah di bawah ini:
 
 ```
 mvn spring-boot:run -Dspring-boot.run.profiles=dev
