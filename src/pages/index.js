@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Halo, Selamat Datang di ${siteConfig.title}`}
+      title={`Belajar di ${siteConfig.title}`}
       description="Tutorial Pemrograman, Android, Sysadmin, Linux, Jaringan Komputer/Networking, Security <head />">
       <HomepageHeader />
       <main>

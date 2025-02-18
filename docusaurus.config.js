@@ -204,7 +204,7 @@ const config = {
             ],
           },
         ],
-        copyright: `🐒 ${new Date().getFullYear()} &bull; TimposuLabs &bull; Build with Love ❤️`,
+        copyright: `🐒 ${new Date().getFullYear()} &bull; TimposuLabs &bull; Build with Love 🚀`,
       },
       prism: {
         theme: lightCodeTheme,
