@@ -1,11 +1,11 @@
 ---
 slug: install-temurin-fedora
-title: Cara Install Temurin JDK di Fedora/Redhat/Centos
+title: Cara Install Eclipse Temurin JDK di Fedora/Redhat/Centos
 authors: topekox
 tags: [java, jdk, linux, fedora, redhat]
 ---
 
-Secara default pada mayoritas distro linux sudah menyertakan paket Openjdk pada repository mereka, termasuk Redhat dan turunannya. Tetapi kita dapat menginstall versi distribusi JDK lain termasuk distribusi JDK Temurin. Temutin sendiri dulunya bernama AdoptOpenJDK/Adoptium.
+Secara default pada mayoritas distro linux sudah menyertakan paket Openjdk pada repository mereka, termasuk Redhat dan turunannya. Tetapi kita dapat menginstall versi distribusi JDK lain termasuk distribusi [Eclipse Temurin JDK](https://adoptium.net/temurin) (Temurin). Temurin sendiri dulunya bernama AdoptOpenJDK/Adoptium, yang saat ini berada di bawah project Eclipse Temurin.
 
 <!--truncate-->
 
