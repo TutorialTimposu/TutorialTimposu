@@ -3,6 +3,16 @@ sidebar_position: 15
 title: 'Java NavigableMap'
 ---
 
+`NavigableMap` adalah turunan dari `SortedMap`, namun `NagivableMap` memiliki kemampuan navigasi berdasarkan operasi kurang dari, lebih dari dan sejenisnya. misal, kita ingin mengambil data yang lebih dari key x atau kurang dari key y, ini bisa dilakukan di `NavigableMap`.
+
+`NavigableMap` memiliki implementasi class `TreeMap`.
+
+![TreeMap](/img/java/treemap.png)
+
+_source: https://codingbison.com//java-collections/java-collections-navigable-map-interface.html_
+
+Contoh:
+
 ```java
 import java.util.NavigableMap;
 import java.util.TreeMap;
@@ -40,6 +50,8 @@ public class DemoNavigableMap {
 ```
 
 ## Immutable NavigableMap
+
+Untuk membuat `NavigableMap` menjadi immutable dapat menggunakan class `Collections`.
 
 ```java
 // Immutable NavigableMap

@@ -62,4 +62,4 @@ Output:
 
 Untuk dokumentasi lengkapnya silahkan kunjungi:
 
-* https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html
+:link: https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html

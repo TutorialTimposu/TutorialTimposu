@@ -3,7 +3,7 @@ sidebar_position: 24
 title: 'Collection to Array'
 ---
 
-Interface Collection memiliki method `toArray() ` untuk melakukan konversi collection ke Array. Ini sangat cocok jika kita ingin mengubah collection ke Array, misal saja karena mau memanggil method yang memang parameternya tipenya array, bukan collection.
+Interface Collection memiliki method `toArray()` untuk melakukan konversi collection ke Array. Ini sangat cocok jika kita ingin mengubah collection ke Array, misal saja karena mau memanggil method yang memang parameternya tipenya array, bukan collection.
 
 Contoh: 
 

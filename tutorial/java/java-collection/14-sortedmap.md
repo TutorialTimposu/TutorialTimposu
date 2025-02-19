@@ -3,6 +3,10 @@ sidebar_position: 14
 title: 'Java SortedMap'
 ---
 
+`SortedMap` adalah implementasi Map dengan data key diurutkan sesuai dengan `Comparable` key atau bisa menggunakan `Comparator`. `SortedMap` cocok untuk kasus yang posisi key pada Map harus berurut.
+
+Contoh:
+
 ```java
 import java.util.Comparator;
 import java.util.SortedMap;

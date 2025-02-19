@@ -1,7 +1,17 @@
 ---
 sidebar_position: 19
-title: 'Binary Search'
+title: 'Binary Search Collection'
 ---
+
+Secara default `List` di Java memiliki fitur search atau get data, namun implementasinya menggunakan sequential search, artinya data akan di cek satu per satu dari awal. Salah satu algoritma pencarian yang populer adalah binary search, namun binary search hanya bisa dilakukan jika datanya telah berurutan. Untungnya di Java Collection sudah ada implementasi binary search, sehingga kita tidak perlu membuatnya secara manual.
+
+:::info
+:thinking: Untuk selanjutnya pelajari terlebih dahulu binarysearch
+
+:link: https://www.geeksforgeeks.org/collections-binarysearch-java-examples/
+:::
+
+Contoh:
 
 ```java
 import java.util.ArrayList;
@@ -9,8 +19,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-// untuk selanjutnya pelajari terlebih dahulu binarysearch
-// more: https://www.geeksforgeeks.org/collections-binarysearch-java-examples/
 public class DemoBinarySearch {
 
 	public static void main(String[] args) {

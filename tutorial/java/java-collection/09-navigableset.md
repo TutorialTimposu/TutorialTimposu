@@ -3,6 +3,10 @@ sidebar_position: 9
 title: 'Java NavigableSet'
 ---
 
+`NavigableSet` adalah turunan dari `SortedSet`. `NavigableSet` menambah method-method untuk melakukan navigasi pencarian element, seperti mencari elemen yang lebih besar dari, kurang dari, membalikkan urutan set, dan lain-lain.
+
+Berikut method-method dalam interface `NavigableSet`:
+
 ![](/img/java/navigableset.png)
 
 Contoh:
