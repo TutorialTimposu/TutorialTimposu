@@ -22,14 +22,12 @@ public class DemoIterable {
         }
 
     }
-
 }
 ```
 
 Sebelum adanya iterable cara lama menggunakan method `iterator()`. Interface `Iterable` sendiri mempunyai kontrak method `Iterator<T> iterator();` yang bisa digunakan untuk melakukan iterasi.
 
 ```java
-
 Iterable<String> names = List.of("Ucup", "Ade", "Recky");
 
 /**
