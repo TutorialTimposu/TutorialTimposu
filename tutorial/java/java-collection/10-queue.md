@@ -11,7 +11,7 @@ title: 'Java Queue'
  * `LinkedList` = menggunakan double linked list sebagai implementasi queue nya
  * `PriorityQueue` = menggunakan array sebagai implementasi queue nya, namun diurutkan menggunakan `Comparable` atau `Comparator`.
 
-Interface `Queue` menyediakan beberapa method untuk menambahkan, menghapus, dan memeriksa elemen dalam antrian. Berikut ini adalah beberapa metode yang paling umum digunakan:
+Interface `Queue` menyediakan beberapa method untuk menambahkan, menghapus, dan memeriksa elemen dalam antrian. Berikut ini adalah beberapa method yang paling umum digunakan:
 
 * `add(element)`: Menambahkan elemen ke bagian belakang antrian. Jika antrian penuh, akan menimbulkan exception.
 * `offer(element)`: Menambahkan elemen ke bagian belakang antrian. Jika antrian penuh, mengembalikan nilai `false`.
