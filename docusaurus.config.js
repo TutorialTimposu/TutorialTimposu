@@ -39,6 +39,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 10,
           // Please change this to your repo.
           // editUrl: 'https://github.com/TimposuLabs/TimposuLabs.github.io/tree/main/',
         },
