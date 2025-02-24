@@ -5,6 +5,9 @@ title: 'Java Queue'
 
  `Queue` digunakan untuk memasukan data berdasarkan antrian (siapa yang pertama masuk dia yang pertama keluar) FIFO (First In First Out). Interface `Queue` mempunyai 3 class konkrit yaitu `ArrayDeque`, `PriorityQueue` dan `LinkedList`.
 
+ ![Queue](https://www.programiz.com/sites/tutorial2program/files/queue-implementation.png)
+ ___source:__ https://www.programiz.com/java-programming/queue_
+
  Interface `Queue` menyediakan beberapa method untuk menambahkan, menghapus, dan memeriksa elemen dalam antrian. Berikut ini adalah beberapa method yang paling umum digunakan:
 
 * `add(element)`: Menambahkan elemen ke bagian belakang antrian. Jika antrian penuh, akan menimbulkan exception.
@@ -15,6 +18,9 @@ title: 'Java Queue'
 * `peek()`: Mengembalikan elemen di bagian depan antrian tanpa menghapusnya. Jika antrian kosong, akan mengembalikan nilai `null`.
 
 Interface `Queue` diimplementasikan oleh beberapa class di Java, termasuk `LinkedList`, `ArrayDeque`, dan `PriorityQuee`. Masing-masing class ini menyediakan implementasi yang berbeda dari interface `Queue`, dengan karakteristik dan fitur kinerja yang berbeda.
+
+![Queue](https://www.programiz.com/sites/tutorial2program/files/queue-interface.png)
+___source:__ https://www.programiz.com/java-programming/queue_
 
  ### `ArrayDeque` vs `LinkedList` vs `PriorityQueue`
  
@@ -55,3 +61,4 @@ public class DemoQueue {
 
 * https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
 * https://www.geeksforgeeks.org/queue-interface-java/
+* https://www.programiz.com/java-programming/queue
