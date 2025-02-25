@@ -5,13 +5,13 @@ title: 'Java Queue'
 
  `Queue` digunakan untuk memasukan data berdasarkan antrian (siapa yang pertama masuk dia yang pertama keluar) FIFO (First In First Out). Interface `Queue` mempunyai 3 class konkrit yaitu `ArrayDeque`, `PriorityQueue` dan `LinkedList`.
 
- ![Queue](https://www.programiz.com/sites/tutorial2program/files/queue-implementation.png)
+ ![Queue](/img/java/queue-implementation.png)
  ___source:__ https://www.programiz.com/java-programming/queue_
 
  Interface `Queue` menyediakan beberapa method untuk menambahkan, menghapus, dan memeriksa elemen dalam antrian. Berikut ini adalah beberapa method yang paling umum digunakan:
 
-* `add(element)`: Menambahkan elemen ke bagian belakang antrian. Jika antrian penuh, akan menimbulkan exception.
-* `offer(element)`: Menambahkan elemen ke bagian belakang antrian. Jika antrian penuh, mengembalikan nilai `false`.
+* `add(element)`: Menambahkan elemen ke bagian belakang antrian. Jika berhasil akan mengembalikan nilai `true`. Jika gagal atau antrian penuh, akan menimbulkan exception.
+* `offer(element)`: Menambahkan elemen ke bagian belakang antrian. Jika berhasil akan mengembalikan nilai `true`. Jika gagal atau antrian penuh, mengembalikan nilai `false`.
 * `remove()`: Menghapus dan mengembalikan elemen di bagian depan antrian. Jika antrian kosong, akan menimbulkan exception.
 * `poll()`: Menghapus dan mengembalikan elemen di bagian depan antrian. Jika antrian kosong, akan mengembalikan nilai `null`.
 * `element()`: Mengembalikan elemen di bagian depan antrian tanpa menghapusnya. Jika antrian kosong, akan menimbulkan exception.
