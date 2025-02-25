@@ -1,12 +1,12 @@
 ---
 sidebar_position: 4
-title: 'Mengubah Nama Test'
+title: 'Mengubah Nama Unit Test'
 ---
 
 ## Menggunakan DisplayName
 
 ```java
-@DisplayName("Test untuk pengurangan sukses")
+@DisplayName("Test untuk pembagian sukses")
 @Test
 public void testDivideSuccess() {
 	var result = calculator.divide(6, 2);

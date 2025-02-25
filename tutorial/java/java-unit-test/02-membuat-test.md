@@ -62,6 +62,8 @@ public class Calculator {
 
 2. Membuat class Test
 
+Nama class dan file menggunakan akhiran Test contoh nama file contoh `AppTest`, `PersonsTest`, karena dalam beberapa kasus nama file test tidak dieksekusi `mvn test`.
+
 ```java
 import org.junit.jupiter.api.Test;
 
@@ -106,6 +108,14 @@ public class AppTest {
         [INFO] Total time:  1.631 s
         [INFO] Finished at: 2025-02-22T19:47:34+08:00
         ```
+
+        Jika hanya menjalankan test dengan spesifik class test, dapat menggunakan perintah berikut:
+
+        ```
+        mvn clean test -Dtest="AppTest"
+        ```
+
+        > 📝 _Catatan: argumen pada `-Dtest` disesuaikan dengan nama class yang ingin di test._
     
     * Menjalankan Test dengan IDE
 
