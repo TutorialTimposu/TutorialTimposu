@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: 'Membuat Lamda'
+title: 'Membuat Lambda'
 ---
 
 Setelah kita mengenal apa itu Lambda, pada tutorial kali ini kita akan membuat Lambda pertama kita. 
