@@ -40,8 +40,72 @@ Contoh misalkan kita memasang dependecy Gson, ke dalam `pom.xml`:
 </dependency>
 ```
 
-Jika menggunaka IDE biasanya akan langsung mendownload dependency tersebut. Jika dilakukan secara manual bisa menggunakan perintah:
+Jika menggunakan IDE biasanya akan langsung mendownload dependency tersebut. Jika dilakukan secara manual bisa menggunakan perintah:
 
 ```
 mvn install
 ```
+
+## Uji Coba
+
+Melakukan ujicoba dependency Gson yang sudah terpasang.
+
+* Membuat Model
+
+```java
+public class Person {
+
+	private String firstName;
+	private String lastName;
+	
+	public Person() {
+	}
+	
+	public Person(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+}
+```
+
+* Class Main
+
+```java
+import com.google.gson.Gson;
+
+public class App {
+    public static void main(String[] args) {
+        Gson gson = new Gson();
+        
+        Person ariel = new Person("Ariel", "Peterpan");
+        String toJson = gson.toJson(ariel);
+        
+        System.out.println(toJson);
+    }
+}
+```
+
+Output:
+
+```
+{"firstName":"Ariel","lastName":"Peterpan"}
+```
+
+Jika sukses maka akan menampilkan output seperti di atas.
